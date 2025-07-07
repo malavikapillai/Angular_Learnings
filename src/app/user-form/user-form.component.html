@@ -1,0 +1,15 @@
+<h2>Template Driven Form Example</h2>
+
+<form #myForm="ngForm" (ngSubmit)="onsubmit()">
+  <label>Your Name:</label>
+  <input name="username" [(ngModel)]="username" required>
+
+  <br><br>
+
+  <button type="submit">Submit</button>
+</form>
+
+<p>You typed: {{ username }}</p>
+
+
+<hr>

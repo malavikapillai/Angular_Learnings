@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic HTML Form</title>
+  <style>
+    form {
+      width: 300px;
+      margin: auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 6px;
+      margin-top: 4px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 8px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align: center;">User Registration Form</h2>
+
+  <form>
+    <label for="firstname">First Name:</label>
+    <input type="text" id="firstname" [(ngModel)]="Userobj.firstname" name="firstname" required>
+
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="lastname" name="lastname" [(ngModel)]="Userobj.lastname"required>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" [(ngModel)]="Userobj.username" required>
+
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" [(ngModel)]="Userobj.city" required>
+
+    <label for="state">State:</label>
+    <select id="state" name="state" [(ngModel)]="Userobj.state" required>
+      <option value="">-- Select State --</option>
+      <option value="kerala">Kerala</option>
+      <option value="tamilnadu">Tamil Nadu</option>
+      <option value="karnataka">Karnataka</option>
+      <option value="maharashtra">Maharashtra</option>
+    </select>
+
+    <label for="zip">Zip Code:</label>
+    <input type="text" id="zip" name="zip" [(ngModel)]="Userobj.zipcode" required>
+
+    <label>
+      <input type="checkbox" name="terms" [(ngModel)]="Userobj.isagree"required>
+      I agree to the terms and conditions
+    </label>
+
+    <button type="button" (click)="onsave()">Submit</button>
+  </form>
+
+</body>
+</html>
+

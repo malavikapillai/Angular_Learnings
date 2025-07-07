@@ -1,0 +1,30 @@
+<p>Data fetched from GET API</p>
+<button (click)="getusers()">FETCH DATA FROM API</button>
+<hr>
+
+
+<div class="row">
+    <div class="col-6">
+        <table>
+            <thead>
+                <tr>
+                <th>Sr.No</th>
+                <th>Name</th>
+                <th>email</th>
+                <th>phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (item of users; track $index) {
+                    <tr>
+                        <td>{{item.id}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.phone}}</td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
